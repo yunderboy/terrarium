@@ -13,18 +13,14 @@ from src.config import WORLD_HEIGHT, WORLD_WIDTH, BIRTH_INTERVAL
 class Blob(object):
     blobs = []
 
-    def __init__(self, x, y, health=100, rotation=0, age=0, oid=uuid4(), brain=None):
+    def __init__(self, x, y, health=100, rotation=0, age=0, oid=uuid4()):
         self.x = x
         self.y = y
         self.age = age
         self.last_bred_age = 0
         self.health = health
         self.rotation = rotation
-        if brain is None:
-            self.brain = NeuralNetwork(2, 4, 2)
-        else:
-            self.brain = brain
-
+        self.brain = NeuralNetwork(2, 4, 2)
         Blob.blobs.append(self)
         self.oid = oid
 
@@ -92,11 +88,6 @@ class Blob(object):
         if self.age - self.last_bred_age > BIRTH_INTERVAL:
             self.last_bred_age = self.age
 
-            child = Blob(
-                randrange(0, WORLD_WIDTH),
-                randrange(0, WORLD_HEIGHT),
-                brain=NeuralNetwork(2, 4, 2)
-            )
-
+            child = Blob(randrange(0, WORLD_WIDTH), randrange(0, WORLD_HEIGHT))
 
         return

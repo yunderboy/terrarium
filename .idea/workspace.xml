@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ee10cf-3078-47da-a6c8-d149602754f8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Blob.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Brain.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Food.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/config.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/game_setup.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/god_functions/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/god_functions/spawn_entities.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/logger.py" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" afterPath="$PROJECT_DIR$/src/main.py" />
+      <change beforePath="$PROJECT_DIR$/src/Blob.py" afterPath="$PROJECT_DIR$/src/Blob.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/Blob.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="662">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <caret line="90" column="79" lean-forward="false" selection-start-line="90" selection-start-column="79" selection-end-line="90" selection-end-column="79" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -458,12 +449,20 @@
       <workItem from="1527924045196" duration="206000" />
       <workItem from="1527924289963" duration="12667000" />
       <workItem from="1527961199807" duration="658000" />
-      <workItem from="1528025053755" duration="14594000" />
+      <workItem from="1528025053755" duration="14692000" />
     </task>
+    <task id="LOCAL-00001" summary="Got the basics sketched out">
+      <created>1528042655650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528042655650</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38616000" />
+    <option name="totallyTimeSpent" value="38714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -507,6 +506,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Got the basics sketched out" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got the basics sketched out" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -876,7 +879,7 @@
     <entry file="file://$PROJECT_DIR$/src/Blob.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="662">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <caret line="90" column="79" lean-forward="false" selection-start-line="90" selection-start-column="79" selection-end-line="90" selection-end-column="79" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
