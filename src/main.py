@@ -18,16 +18,16 @@ def main():
     pygame.display.update()
 
     while True:
-        #time.sleep(0.0005)
+        #time.sleep(0.005)
         screen.fill(WHITE)
 
         world_age += 1
 
         if len(Blob.blobs) < MAX_BLOBS:
-            spawn_blobs()
+            spawn_blobs(amount=1)
 
         if len(Food.food) < MAX_FOOD:
-            spawn_food(amount=MAX_BLOBS)
+            spawn_food()
 
         # Evaluate food
         for food in Food.food:

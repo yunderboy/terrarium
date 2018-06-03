@@ -5,15 +5,16 @@ import pygame
 
 from src.config import WORLD_HEIGHT, WORLD_WIDTH
 from src.game_setup import screen, GREEN
+from src.logger import logger
 
 
 class Food(object):
     food = []
 
-    def __init__(self, x=randrange(0, WORLD_WIDTH), y=randrange(0, WORLD_HEIGHT), oid=uuid4()):
-        self.x = x
-        self.y = y
-        self.oid = oid
+    def __init__(self):
+        self.x = randrange(0, WORLD_WIDTH)
+        self.y = randrange(0, WORLD_HEIGHT)
+        self.oid = uuid4()
 
         Food.food.append(self)
 
