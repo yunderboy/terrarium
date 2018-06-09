@@ -11,8 +11,9 @@ def spawn_blobs(amount=MAX_BLOBS):
 
     for i in range(amount):
         Blob(
-            randrange(0, WORLD_WIDTH),
-            randrange(0, WORLD_HEIGHT)
+            int(WORLD_WIDTH/2),600
+            #randrange(0, WORLD_WIDTH),
+            #randrange(0, WORLD_HEIGHT)
         )
     return
 

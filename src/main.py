@@ -2,7 +2,7 @@ import time
 
 import pygame
 
-from src.config import WORLD_HEIGHT, WORLD_WIDTH, MAX_BLOBS, MAX_FOOD
+from src.config import WORLD_HEIGHT, WORLD_WIDTH, MAX_BLOBS, MAX_FOOD, RANDOM_SPAWN_MAX_POP
 from src.game_setup import WHITE
 from src.god_functions.spawn_entities import spawn_blobs, spawn_food
 from src.Blob import Blob
@@ -23,12 +23,6 @@ def main():
 
         world_age += 1
 
-        if len(Blob.blobs) < MAX_BLOBS:
-            spawn_blobs(amount=1)
-
-        if len(Food.food) < MAX_FOOD:
-            spawn_food()
-
         # Evaluate food
         for food in Food.food:
             food.evaluate()
@@ -36,6 +30,13 @@ def main():
         # Evaluate blobs
         for blob in Blob.blobs:
             blob.evaluate()
+
+        if len(Blob.blobs) < RANDOM_SPAWN_MAX_POP:
+            spawn_blobs(amount=1)
+
+        if len(Food.food) < MAX_FOOD:
+            spawn_food()
+
 
         ev = pygame.event.get()
 

@@ -1,5 +1,6 @@
 import numpy as np
 
+np.random.seed(1)
 
 class NeuralNetwork(object):
     def __init__(self, input, hidden, output):
@@ -46,3 +47,8 @@ class NeuralNetwork(object):
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
+
+
+if __name__ == '__main__':
+    nn = NeuralNetwork(3, 4, 2)
+    print(nn)
