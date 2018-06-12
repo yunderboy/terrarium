@@ -1,52 +1,19 @@
+from typing import Tuple
 import time
 
-import pygame
-
-from src.config import WORLD_HEIGHT, WORLD_WIDTH, MAX_BLOBS, MAX_FOOD, RANDOM_SPAWN_MAX_POP
-from src.game_setup import WHITE
-from src.god_functions.spawn_entities import spawn_blobs, spawn_food
-from src.Blob import Blob
-from src.Food import Food
+from src.environment import environment
+from src.config import MAX_AGENTS
+from src.actions import Action
+from src.observations import Observation
 from src.logger import logger
 
-
-def main():
-    world_age = 0
-
-    screen = pygame.display.set_mode((WORLD_WIDTH, WORLD_HEIGHT))
-    screen.fill(WHITE)
-    pygame.display.update()
-
-    while True:
-        #time.sleep(0.005)
-        screen.fill(WHITE)
-
-        world_age += 1
-
-        # Evaluate food
-        for food in Food.food:
-            food.evaluate()
-
-        # Evaluate blobs
-        for blob in Blob.blobs:
-            blob.evaluate()
-
-        if len(Blob.blobs) < RANDOM_SPAWN_MAX_POP:
-            spawn_blobs(amount=1)
-
-        if len(Food.food) < MAX_FOOD:
-            spawn_food()
-
-
-        ev = pygame.event.get()
-
-        for event in ev:
-
-            if event.type == pygame.QUIT:
-                exit()
-
-        pygame.display.update()
-
-
 if __name__ == '__main__':
-    main()
+
+    rand_actions = tuple([Action(rotation='ccw', movement=True) for i in range(MAX_AGENTS)])
+
+    world = environment(2000 * 22)
+    next(world)
+    for i in range(2000*2):
+        time.sleep(1)
+        observations: Tuple[Observation, ...] = world.send(rand_actions)
+        logger.info('Observations: \n %s', observations.__str__())
